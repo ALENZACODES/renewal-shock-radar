@@ -1,0 +1,12 @@
+const C=require('../calc.js'),assert=require('assert');let n=0;const near=(a,b,t=0.01)=>{assert(Math.abs(a-b)<=t,a+' vs '+b);n++;};
+near(C.mi(6),Math.pow(1.03,1/6)-1,1e-12);
+near(C.payment(120000,0,120),1000);
+near(C.payment(500000,C.mi(5),300),2908.02,0.5);
+const s0=C.shock({loan:500000,origRate:5,amort:25,term:5,newRate:5});near(s0.change,0,0.01);near(s0.pct,0,1e-6);
+const s=C.shock({loan:500000,origRate:2,amort:25,term:5,newRate:4.5,income:150000});
+assert(s.newPmt>s.oldPmt);n++;near(s.balance,C.balanceAfter(500000,C.mi(2),s.oldPmt,60),1e-6);
+near(s.shareOld,s.oldPmt/12500*100,1e-9);assert(s.keepPaymentYears>20);n++;
+assert(C.shock({loan:500000,origRate:5,amort:25,term:5,newRate:3}).pct<0);n++;
+assert.equal(C.band(3),'low');assert.equal(C.band(10),'moderate');assert.equal(C.band(20),'high');assert.equal(C.band(40),'severe');n+=4;
+const c=C.curve({loan:400000,origRate:2,amort:25,term:5},[3,4,5]);assert(c[0]<c[1]&&c[1]<c[2]);n++;
+console.log('renewal-shock-radar: '+n+' assertions passed');
