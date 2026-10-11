@@ -1,25 +1,36 @@
 # Renewal Shock Radar
 
-Shows how much a mortgage payment can jump at renewal, using published Bank of Canada and CMHC figures, with sliders to plug in your own loan.
+[![tests](https://github.com/ALENZACODES/renewal-shock-radar/actions/workflows/tests.yml/badge.svg)](https://github.com/ALENZACODES/renewal-shock-radar/actions/workflows/tests.yml)
 
-Live: https://alenzacodes.github.io/renewal-shock-radar/
+**Live:** https://alenzacodes.github.io/renewal-shock-radar/
 
-## How to use
+![National picture and example household](docs/screenshot-desktop.png)
 
-Open the live page, or clone the repo and open index.html in a browser. No build step and no install. Change the inputs and the results update as you go.
+A lot of Canadians who locked in a 5-year fixed in 2020 and 2021 are renewing at rates two or three points higher. This page shows what that means for one household. It starts from an example (a 5-year fixed taken out in 2021, at the Bank of Canada's median outstanding balance) and lets you swap in your own balance, rate and amortization.
 
-Run the tests with Node:
+## What you see
+
+- The national picture: how many mortgages renew each year, from CMHC
+- Your new payment and the change in dollars and percent
+- A shock band: low (under 5%), moderate (5 to 15%), high (15 to 30%) or severe (30% and up)
+- A chart of how the payment moves across a range of renewal rates
+
+## Running it
+
+Open `index.html` or serve the folder with `python3 -m http.server`. No install.
+
+## Tests
 
     node tests/test.js
 
+15 checks on the payment and remaining balance math, the shock calculation and the band cut-offs. They run on every push.
+
 ## Sources
 
-- https://eppd1strscr01.blob.core.windows.net/cmhcprdcontainer/sf/project/archive/publications/residential_mortgage_industry_report/residential-mortgage-industry-report-fall-2025-en.pdf
-- https://laws-lois.justice.gc.ca/eng/acts/i-15/page-1.html
-- https://www.bankofcanada.ca/2025/01/staff-analytical-note-2025-1/
-- https://www.bankofcanada.ca/2025/07/staff-analytical-note-2025-21/
-- https://www.cmhc-schl.gc.ca/media-newsroom/news-releases/2026/renewal-wave-peaks-still-dominates-mortgage-market
-- https://www.cmhc-schl.gc.ca/professionals/housing-markets-data-and-research/housing-research/research-reports/housing-finance/residential-mortgage-industry-report
+- Bank of Canada staff analytical notes on mortgage renewals: https://www.bankofcanada.ca/2025/01/staff-analytical-note-2025-1/ and https://www.bankofcanada.ca/2025/07/staff-analytical-note-2025-21/
+- CMHC Residential Mortgage Industry Report, Fall 2025: https://www.cmhc-schl.gc.ca/professionals/housing-markets-data-and-research/housing-research/research-reports/housing-finance/residential-mortgage-industry-report
+- CMHC, renewal wave release (2026): https://www.cmhc-schl.gc.ca/media-newsroom/news-releases/2026/renewal-wave-peaks-still-dominates-mortgage-market
+- Interest Act (semi-annual compounding): https://laws-lois.justice.gc.ca/eng/acts/i-15/page-1.html
 
 ---
 
