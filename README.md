@@ -2,7 +2,7 @@
 
 Shows how much a mortgage payment can jump at renewal, using published Bank of Canada and CMHC figures, with sliders to plug in your own loan.
 
-Live: https://jk-cu-ms-ds.github.io/renewal-shock-radar/
+Live: https://alenzacodes.github.io/renewal-shock-radar/
 
 ## How to use
 
