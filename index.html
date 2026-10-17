@@ -4,11 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Renewal Shock Radar | John Khan</title>
+    <meta property="og:title" content="Renewal Shock Radar" />
+    <meta
+      property="og:description"
+      content="How much a Canadian mortgage payment can rise at renewal, from Bank of Canada and CMHC figures."
+    />
+    <meta property="og:image" content="https://alenzacodes.github.io/renewal-shock-radar/docs/social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="author" content="John Khan" />
     <meta
       name="description"
       content="Canadian mortgage renewal payment shock, built on Bank of Canada and CMHC figures, with scenario sliders."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Pinyon+Script&display=swap"
+    />
+    <link rel="stylesheet" href="theme/waves.css" />
     <link rel="stylesheet" href="style.css" />
     <style>
       .hero {
@@ -26,7 +40,7 @@
       .gauge {
         height: 14px;
         border-radius: 99px;
-        background: linear-gradient(90deg, #2ecc8f, #f5b041 45%, #ef5b6b);
+        background: linear-gradient(90deg, #1b6b3a, #8a5a00 45%, #b3261e);
         position: relative;
         margin: 10px 0 4px;
       }
@@ -41,13 +55,13 @@
       }
       .out {
         float: right;
-        color: #e8edf7;
+        color: #14213d;
         font-weight: 600;
       }
     </style>
   </head>
-  <body>
-    <header class="top">
+  <body class="w-headings">
+    <header class="top w-wave">
       <div class="brand">
         <div class="logo" aria-hidden="true">RR</div>
         <div>
@@ -94,7 +108,7 @@
         <ol class="src" id="src"></ol>
       </div>
     </main>
-    <footer class="foot">Educational only, not financial advice. John Khan.</footer>
+    <footer class="foot">Educational only, not financial advice. <span class="w-script">John Khan</span></footer>
     <script src="charts.js"></script>
     <script src="calc.js"></script>
     <script src="app.js"></script>

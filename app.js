@@ -99,10 +99,10 @@
     Charts.line($("#curve"), {
       xLabels: rates.map((x) => x + "%"),
       series: [
-        { name: "Payment change at renewal (%)", color: "#4f8cff", data: C.curve(o, rates), fill: 1 },
+        { name: "Payment change at renewal (%)", color: "#011f5b", data: C.curve(o, rates), fill: 1 },
         {
           name: "BoC average for 5-year fixed, upper end (20%)",
-          color: "#f5b041",
+          color: "#8a5a00",
           dash: "5 4",
           data: rates.map(() => 20),
         },
@@ -113,7 +113,7 @@
     Charts.bar($("#wave"), {
       labels: ["2026", "2027"],
       values: [1150000, 940000],
-      colors: ["#4f8cff", "#22c3a6"],
+      colors: ["#011f5b", "#990000"],
       fmt: (x) => (x / 1e6).toFixed(2) + "M",
       title: "Mortgages renewing",
     });

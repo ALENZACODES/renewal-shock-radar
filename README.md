@@ -1,3 +1,5 @@
+![Renewal Shock Radar banner](docs/banner.png)
+
 # Renewal Shock Radar
 
 [![tests](https://github.com/ALENZACODES/renewal-shock-radar/actions/workflows/tests.yml/badge.svg)](https://github.com/ALENZACODES/renewal-shock-radar/actions/workflows/tests.yml)
