@@ -15,9 +15,14 @@ A lot of Canadians who locked in a 5-year fixed in 2020 and 2021 are renewing at
 - A shock band: low (under 5%), moderate (5 to 15%), high (15 to 30%) or severe (30% and up)
 - A chart of how the payment moves across a range of renewal rates
 
+## Limits
+
+- The example household and the renewal counts are national figures. Your lender, term and prepayments change the result.
+- Payments use semi-annual compounding for fixed rates. Variable-rate mortgages with fixed payments behave differently at renewal.
+
 ## Running it
 
-Open `index.html` or serve the folder with `python3 -m http.server`. No install.
+Open `index.html` or serve the folder with `python3 -m http.server 8000` and open http://localhost:8000/. No install.
 
 ## Tests
 
@@ -32,6 +37,12 @@ Open `index.html` or serve the folder with `python3 -m http.server`. No install.
 - CMHC, renewal wave release (2026): https://www.cmhc-schl.gc.ca/media-newsroom/news-releases/2026/renewal-wave-peaks-still-dominates-mortgage-market
 - Interest Act (semi-annual compounding): https://laws-lois.justice.gc.ca/eng/acts/i-15/page-1.html
 
----
+On a phone:
 
-Educational only, not financial advice. John Khan.
+<img src="docs/screenshot-mobile.png" alt="Mobile layout" width="300">
+
+Educational only, not financial advice.
+
+## Licence
+
+MIT. Copyright 2026 John Khan.
