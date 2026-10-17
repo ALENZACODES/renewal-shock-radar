@@ -30,6 +30,14 @@ Open `index.html` or serve the folder with `python3 -m http.server 8000` and ope
 
 15 checks on the payment and remaining balance math, the shock calculation and the band cut-offs. They run on every push.
 
+## Files
+
+    index.html, style.css   the page
+    app.js                  national figures, household inputs and notes
+    calc.js                 payment, balance and shock-band maths, usable in Node
+    charts.js               small SVG charts, no libraries
+    tests/test.js           unit tests
+
 ## Sources
 
 - Bank of Canada staff analytical notes on mortgage renewals: https://www.bankofcanada.ca/2025/01/staff-analytical-note-2025-1/ and https://www.bankofcanada.ca/2025/07/staff-analytical-note-2025-21/
