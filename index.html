@@ -1,16 +1,102 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Renewal Shock Radar | John Khan</title><meta name="author" content="John Khan"><meta name="description" content="Canadian mortgage renewal payment shock, built on Bank of Canada and CMHC figures, with scenario sliders.">
-<link rel="stylesheet" href="style.css"><style>.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:18px}.hero .kpi .v{font-size:26px}.hero .kpi a{font-size:11px}.gauge{height:14px;border-radius:99px;background:linear-gradient(90deg,#2ecc8f,#f5b041 45%,#ef5b6b);position:relative;margin:10px 0 4px}.gauge b{position:absolute;top:-5px;width:4px;height:24px;background:#fff;border-radius:2px;transition:left .2s}.out{float:right;color:#e8edf7;font-weight:600}</style></head><body>
-<header class="top"><div class="brand"><div class="logo" aria-hidden="true">RR</div><div><h1>Renewal Shock Radar</h1><small>What the Canadian renewal wave means for one household</small></div></div><span class="tag">Data: Bank of Canada, CMHC</span></header>
-<main>
-<h2 class="sr">National picture</h2><div class="hero" id="hero"></div>
-<div class="grid"><section class="card controls" aria-label="Scenario"><h2>Your scenario</h2><div id="sliders"></div>
-<p class="src">Defaults are an example household: a 5-year fixed taken out in 2021. The starting balance defaults to the Bank of Canada's median outstanding principal.</p></section>
-<section class="stack" aria-live="polite"><div class="kpis" id="kpis"></div>
-<div class="card"><h2>Payment shock band</h2><div class="gauge" aria-hidden="true"><b id="needle"></b></div><div class="legend"><span>Low &lt;5%</span><span>Moderate 5 to 15%</span><span>High 15 to 30%</span><span>Severe 30%+</span></div></div>
-<div class="card chart"><h2>Payment change by renewal rate</h2><div id="curve"></div></div>
-<div class="card chart"><h2>Mortgages coming up for renewal (CMHC)</h2><div id="wave"></div></div>
-<div class="card" id="notes"></div></section></div>
-<div class="card" style="margin-top:18px"><h2>Sources</h2><ol class="src" id="src"></ol></div></main>
-<footer class="foot">Educational only, not financial advice. John Khan.</footer>
-<script src="charts.js"></script><script src="calc.js"></script><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Renewal Shock Radar | John Khan</title>
+    <meta name="author" content="John Khan" />
+    <meta
+      name="description"
+      content="Canadian mortgage renewal payment shock, built on Bank of Canada and CMHC figures, with scenario sliders."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .hero {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+      .hero .kpi .v {
+        font-size: 26px;
+      }
+      .hero .kpi a {
+        font-size: 11px;
+      }
+      .gauge {
+        height: 14px;
+        border-radius: 99px;
+        background: linear-gradient(90deg, #2ecc8f, #f5b041 45%, #ef5b6b);
+        position: relative;
+        margin: 10px 0 4px;
+      }
+      .gauge b {
+        position: absolute;
+        top: -5px;
+        width: 4px;
+        height: 24px;
+        background: #fff;
+        border-radius: 2px;
+        transition: left 0.2s;
+      }
+      .out {
+        float: right;
+        color: #e8edf7;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">RR</div>
+        <div>
+          <h1>Renewal Shock Radar</h1>
+          <small>What the Canadian renewal wave means for one household</small>
+        </div>
+      </div>
+      <span class="tag">Data: Bank of Canada, CMHC</span>
+    </header>
+    <main>
+      <h2 class="sr">National picture</h2>
+      <div class="hero" id="hero"></div>
+      <div class="grid">
+        <section class="card controls" aria-label="Scenario">
+          <h2>Your scenario</h2>
+          <div id="sliders"></div>
+          <p class="src">
+            Defaults are an example household: a 5-year fixed taken out in 2021. The starting balance defaults to the
+            Bank of Canada's median outstanding principal.
+          </p>
+        </section>
+        <section class="stack" aria-live="polite">
+          <div class="kpis" id="kpis"></div>
+          <div class="card">
+            <h2>Payment shock band</h2>
+            <div class="gauge" aria-hidden="true"><b id="needle"></b></div>
+            <div class="legend">
+              <span>Low &lt;5%</span><span>Moderate 5 to 15%</span><span>High 15 to 30%</span><span>Severe 30%+</span>
+            </div>
+          </div>
+          <div class="card chart">
+            <h2>Payment change by renewal rate</h2>
+            <div id="curve"></div>
+          </div>
+          <div class="card chart">
+            <h2>Mortgages coming up for renewal (CMHC)</h2>
+            <div id="wave"></div>
+          </div>
+          <div class="card" id="notes"></div>
+        </section>
+      </div>
+      <div class="card" style="margin-top: 18px">
+        <h2>Sources</h2>
+        <ol class="src" id="src"></ol>
+      </div>
+    </main>
+    <footer class="foot">Educational only, not financial advice. John Khan.</footer>
+    <script src="charts.js"></script>
+    <script src="calc.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
