@@ -118,7 +118,7 @@
       title: "Mortgages renewing",
     });
     $("#notes").innerHTML =
-      `<h2>Reading this</h2><p>At ${o.newRate.toFixed(2)}%, this household's payment moves from ${money(r.oldPmt)} to ${money(r.newPmt)} a month if they keep the same payoff date. The Bank of Canada estimates five-year fixed holders renewing in 2025 or 2026 face average increases of about 15 to 20% versus December 2024 (source 1). CMHC counts about 1.15 million renewals in 2026 and 940,000 in 2027 (source 3), and notes average rates eased from about 4.8% in January 2025 to about 4.2% in January 2026 (source 4).</p><p>Options worth asking a licensed professional about: extending amortization, a shorter term, prepaying before renewal, or switching lenders. Each has costs and qualification rules.</p>`;
+      `<h2>Reading this</h2><p>At ${o.newRate.toFixed(2)}%, this household's payment moves from ${money(r.oldPmt)} to ${money(r.newPmt)} a month if they keep the same payoff date. The Bank of Canada estimates five-year fixed holders renewing in 2025 or 2026 face average increases of about 15 to 20% versus December 2024 (source 1). CMHC counts about 1.15 million renewals in 2026 and 940,000 in 2027 (source 3), and notes average rates eased from about 4.8% in January 2025 to about 4.2% in January 2026 (source 4).</p><p>Options worth asking your lender or a mortgage professional about: extending amortization, a shorter term, prepaying before renewal, or switching lenders. Each has costs and qualification rules.</p>`;
   }
   document.querySelectorAll("#sliders input").forEach((e) => e.addEventListener("input", run));
   run();
